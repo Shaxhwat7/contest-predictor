@@ -1,13 +1,15 @@
 import sys 
+import os
+from dotenv import load_dotenv
 import urllib.parse
-
+import asyncio
 from typing import Optional
 from beanie import init_beanie
 from loguru import logger
 from motor.core import AgnosticClient, AgnosticCollection, AgnosticDatabase
 from motor.motor_asyncio import AsyncIOMotorClient
 
-from models import (
+from .models import (
     Contest, 
     PredictRecord,
     ArchiveRecord,
@@ -15,38 +17,38 @@ from models import (
     Submission,
     User,
 )
-from config import get_yaml_config
-
+from core.config import get_yaml_config
+load_dotenv()
 async_mongodb_client : Optional[AsyncIOMotorClient] = None
 def get_mongodb_config():
-    config = get_yaml_config()
-    return config.get("mongodb")
+    configyaml = get_yaml_config()
+    print(configyaml.get("mongo"))
+    return configyaml.get("mongodb")
 
 
-def get_async_mongodb_client() -> AgnosticClient:
+def get_async_mongodb_client() -> AsyncIOMotorClient:
     global async_mongodb_client
     if async_mongodb_client is None:
-        cfg = get_mongodb_config()
-        ip = cfg.get("ip")
-        port = cfg.get("port")
-        username = urllib.parse.quote_plus(cfg.get("username"))
-        password = urllib.parse.quote_plus(cfg.get("password"))
-        db = cfg.get("db")
-        async_mongodb_client = AsyncIOMotorClient(
-            f"mongodb://{username}:{password}@{ip}:{port}/{db}"
-        )
+        uri = os.getenv("MONGODB_URI")
+        if not uri:
+            raise EnvironmentError("MONGODB_URI environment variable not set")
+        async_mongodb_client = AsyncIOMotorClient(uri)
     return async_mongodb_client
+
 
 
 def get_async_mongodb_database(db_name: Optional[str] = None) -> AgnosticDatabase:
     if db_name is None:
-        db_name = get_mongodb_config().get("db")
+        db_name = os.getenv("MONGODB_DB")
+        if not db_name:
+            raise EnvironmentError("MONGODB_DB environment variable not set")
     client = get_async_mongodb_client()
     return client[db_name]
 
 
 def get_async_mongodb_collection(col_name: str) -> AgnosticCollection:
     db = get_async_mongodb_database()
+    print(db[col_name])
     return db[col_name]
 
 
@@ -68,3 +70,8 @@ async def start_async_mongodb() -> None:
     except Exception as e:
         logger.exception(f"Failed to start MongoDB. Error={e}")
         sys.exit(1)
+if __name__ == "__main__":
+    import asyncio
+    print("Starting script...")
+    asyncio.run(start_async_mongodb())
+    print("Script finished")

@@ -5,7 +5,7 @@ from beanie import Document
 from pydantic import Field
 from pymongo import IndexModel
 
-from schemas import PredictionEvent, UserContestHistoryRecord
+from .schemas import PredictionEvent, UserContestHistoryRecord
 
 DATA_REGION = Literal["CN", "US"]
 
