@@ -5,11 +5,11 @@ from typing import Dict, List, Tuple
 from beanie.odm.operators.update.general import Set
 from loguru import logger
 
-from db.models import ArchiveRecord, Submission
-from db.database import get_async_mongodb_collection
-from db.views import UserKey
-from handler.questions import save_questions, save_questions_real_time_count
-from utils import (
+from core.db.models import ArchiveRecord, Submission
+from core.db.database import get_async_mongodb_collection
+from core.db.views import UserKey
+from core.handler.questions import save_questions, save_questions_real_time_count
+from core.utils import (
     log_exceptions_reraise,
     gather_with_limit,
     infer_contest_start,

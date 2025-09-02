@@ -1,15 +1,21 @@
-import os
 import yaml
+import os
 
-yaml_config = None
+_yaml_config = None
 
 def get_yaml_config():
-    global yaml_config
-    if yaml_config is None:
-        # Get absolute path of the current file
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        config_path = os.path.join(base_dir, "config.yaml")
-        
-        with open(config_path, "r") as yaml_file:
-            yaml_config = yaml.safe_load(yaml_file)
-    return yaml_config
+    """
+    Loads config.yaml safely and caches it.
+    :return: dict
+    """
+    global _yaml_config
+    if _yaml_config is None:
+        config_path = os.path.join(os.path.dirname(__file__), "config.yaml")
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                _yaml_config = yaml.safe_load(f)
+        except FileNotFoundError:
+            raise FileNotFoundError(f"Config file not found: {config_path}")
+        except yaml.YAMLError as e:
+            raise ValueError(f"Error parsing YAML: {e}")
+    return _yaml_config

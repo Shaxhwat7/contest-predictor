@@ -4,11 +4,11 @@ from typing import List, Tuple
 from beanie.odm.operators.update.general import Set
 from loguru import logger
 
-from crawler.contest_record_and_submission import request_contest_records
-from db.models import DATA_REGION, ArchiveRecord, PredictRecord, User
-from handler.submission import save_submission
-from handler.user import save_users_of_contest
-from utils import log_exceptions_reraise, gather_with_limit
+from core.crawler.contests_records import request_contest_records
+from core.db.models import DATA_REGION, ArchiveRecord, PredictRecord, User
+from core.handler.submission import save_submission
+from core.handler.users import save_users_of_contest
+from core.utils import log_exceptions_reraise, gather_with_limit
 
 
 @log_exceptions_reraise

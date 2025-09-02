@@ -1,0 +1,451 @@
+2025-09-02 16:30:11.215 | SUCCESS  | core.db.database:start_async_mongodb:69 - MongoDB connection started successfully
+2025-09-02 16:30:11.288 | SUCCESS  | core.schedule:start_scheduler:122 - Scheduler started successfully
+2025-09-02 16:30:11.288 | SUCCESS  | __main__:start:14 - started all entry functions
+2025-09-02 16:31:11.318 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:02:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:02:11 UTC], next run at: 2025-09-02 11:02:11 UTC), update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC)
+2025-09-02 16:32:11.278 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: save_recent_and_next_two_contests (trigger: date[2025-09-02 11:02:11 UTC], next run at: 2025-09-02 11:02:11 UTC), dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:03:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:03:11 UTC], next run at: 2025-09-02 11:03:11 UTC), update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), update_last_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC)
+2025-09-02 16:32:11.294 | INFO     | core.utils:async_wrapper:72 - save_recent_and_next_two_contests starting...
+2025-09-02 16:32:11.295 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:32:12.849 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:32:12.850 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:32:15.014 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:32:15.014 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:32:17.297 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:32:17.297 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:32:19.494 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:32:19.495 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:32:21.784 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:32:21.785 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:32:24.018 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:32:24.018 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:32:26.258 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:32:26.258 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:32:28.503 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:32:28.504 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:32:30.737 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:32:30.756 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:32:32.978 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:32:32.979 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.com/contest/', 'method': 'GET'}
+2025-09-02 16:32:32.979 | ERROR    | core.crawler.contests:request_contest_homepage_text:67 - Failed to fetch contest homepage: 'NoneType' object has no attribute 'text'
+2025-09-02 16:32:32.980 | ERROR    | core.crawler.contests:request_next_two_contests:76 - Cannot find buildId in homepage HTML
+2025-09-02 16:32:32.980 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[(1, 0)]
+2025-09-02 16:32:34.371 | INFO     | core.crawler.contests:request_past_contests:57 - Fetched 10 past contests across 1 pages
+2025-09-02 16:32:34.372 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:32:38.421 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:32:38.421 | SUCCESS  | core.utils:async_wrapper:74 - save_recent_and_next_two_contests finished.
+2025-09-02 16:33:11.286 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:04:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:04:11 UTC], next run at: 2025-09-02 11:04:11 UTC), update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), update_last_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC), update_last_contests (trigger: date[2025-09-02 11:13:11 UTC], next run at: 2025-09-02 11:13:11 UTC)
+2025-09-02 16:33:11.286 | INFO     | core.utils:async_wrapper:72 - save_recent_and_next_two_contests starting...
+2025-09-02 16:33:11.288 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:33:12.673 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:33:12.674 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:33:14.897 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:33:14.898 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:33:17.462 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:33:17.463 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:33:19.676 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:33:19.677 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:33:21.939 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:33:21.940 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:33:24.500 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:33:24.500 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:33:26.739 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:33:26.739 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:33:28.978 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:33:28.980 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:33:31.223 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:33:31.223 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:33:33.139 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:33:33.139 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.com/contest/', 'method': 'GET'}
+2025-09-02 16:33:33.139 | ERROR    | core.crawler.contests:request_contest_homepage_text:67 - Failed to fetch contest homepage: 'NoneType' object has no attribute 'text'
+2025-09-02 16:33:33.140 | ERROR    | core.crawler.contests:request_next_two_contests:76 - Cannot find buildId in homepage HTML
+2025-09-02 16:33:33.140 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[(1, 0)]
+2025-09-02 16:33:35.060 | INFO     | core.crawler.contests:request_past_contests:57 - Fetched 10 past contests across 1 pages
+2025-09-02 16:33:35.060 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:33:36.660 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:33:36.662 | SUCCESS  | core.utils:async_wrapper:74 - save_recent_and_next_two_contests finished.
+2025-09-02 16:34:11.277 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: save_recent_and_next_two_contests (trigger: date[2025-09-02 11:04:11 UTC], next run at: 2025-09-02 11:04:11 UTC), dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:05:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:05:11 UTC], next run at: 2025-09-02 11:05:11 UTC), update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), update_last_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC), update_last_contests (trigger: date[2025-09-02 11:13:11 UTC], next run at: 2025-09-02 11:13:11 UTC), update_last_contests (trigger: date[2025-09-02 11:14:11 UTC], next run at: 2025-09-02 11:14:11 UTC)
+2025-09-02 16:34:11.293 | INFO     | core.utils:async_wrapper:72 - save_recent_and_next_two_contests starting...
+2025-09-02 16:34:11.312 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:34:12.829 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:34:12.830 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:34:15.156 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:34:15.158 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:34:17.600 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:34:17.600 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:34:19.860 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:34:19.860 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:34:22.100 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:34:22.101 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:34:24.340 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:34:24.340 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:34:26.904 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:34:26.907 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:34:29.137 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:34:29.138 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:34:31.337 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:34:31.338 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:34:33.702 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:34:33.702 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.com/contest/', 'method': 'GET'}
+2025-09-02 16:34:33.703 | ERROR    | core.crawler.contests:request_contest_homepage_text:67 - Failed to fetch contest homepage: 'NoneType' object has no attribute 'text'
+2025-09-02 16:34:33.703 | ERROR    | core.crawler.contests:request_next_two_contests:76 - Cannot find buildId in homepage HTML
+2025-09-02 16:34:33.703 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[(1, 0)]
+2025-09-02 16:34:35.229 | INFO     | core.crawler.contests:request_past_contests:57 - Fetched 10 past contests across 1 pages
+2025-09-02 16:34:35.229 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:34:36.500 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:34:36.500 | SUCCESS  | core.utils:async_wrapper:74 - save_recent_and_next_two_contests finished.
+2025-09-02 16:35:11.291 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:06:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:06:11 UTC], next run at: 2025-09-02 11:06:11 UTC), update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), update_last_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC), update_last_contests (trigger: date[2025-09-02 11:13:11 UTC], next run at: 2025-09-02 11:13:11 UTC), update_last_contests (trigger: date[2025-09-02 11:14:11 UTC], next run at: 2025-09-02 11:14:11 UTC), update_last_contests (trigger: date[2025-09-02 11:15:11 UTC], next run at: 2025-09-02 11:15:11 UTC)
+2025-09-02 16:35:11.291 | INFO     | core.utils:async_wrapper:72 - save_recent_and_next_two_contests starting...
+2025-09-02 16:35:11.293 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:35:12.659 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:35:12.672 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:35:14.899 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:35:14.899 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:35:17.461 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:35:17.461 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:35:19.702 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:35:19.702 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:35:22.266 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:35:22.266 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:35:24.820 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:35:24.820 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:35:27.147 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:35:27.147 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:35:29.625 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:35:29.626 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:35:32.184 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:35:32.184 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:35:34.422 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:35:34.424 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.com/contest/', 'method': 'GET'}
+2025-09-02 16:35:34.424 | ERROR    | core.crawler.contests:request_contest_homepage_text:67 - Failed to fetch contest homepage: 'NoneType' object has no attribute 'text'
+2025-09-02 16:35:34.424 | ERROR    | core.crawler.contests:request_next_two_contests:76 - Cannot find buildId in homepage HTML
+2025-09-02 16:35:34.424 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[(1, 0)]
+2025-09-02 16:35:36.023 | INFO     | core.crawler.contests:request_past_contests:57 - Fetched 10 past contests across 1 pages
+2025-09-02 16:35:36.023 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:35:38.260 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:35:38.261 | SUCCESS  | core.utils:async_wrapper:74 - save_recent_and_next_two_contests finished.
+2025-09-02 16:36:11.282 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: save_recent_and_next_two_contests (trigger: date[2025-09-02 11:06:11 UTC], next run at: 2025-09-02 11:06:11 UTC), dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:07:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:07:11 UTC], next run at: 2025-09-02 11:07:11 UTC), update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), update_last_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC), update_last_contests (trigger: date[2025-09-02 11:13:11 UTC], next run at: 2025-09-02 11:13:11 UTC), update_last_contests (trigger: date[2025-09-02 11:14:11 UTC], next run at: 2025-09-02 11:14:11 UTC), update_last_contests (trigger: date[2025-09-02 11:15:11 UTC], next run at: 2025-09-02 11:15:11 UTC), update_last_contests (trigger: date[2025-09-02 11:16:11 UTC], next run at: 2025-09-02 11:16:11 UTC)
+2025-09-02 16:36:11.298 | INFO     | core.utils:async_wrapper:72 - save_recent_and_next_two_contests starting...
+2025-09-02 16:36:11.299 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:36:12.825 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:36:12.826 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:36:15.159 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:36:15.159 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:36:17.259 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:36:17.259 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:36:19.680 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:36:19.680 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:36:22.107 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:36:22.107 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:36:24.663 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:36:24.664 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:36:26.904 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:36:26.905 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:36:29.141 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:36:29.142 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:36:31.383 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:36:31.383 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:36:33.629 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:36:33.629 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.com/contest/', 'method': 'GET'}
+2025-09-02 16:36:33.630 | ERROR    | core.crawler.contests:request_contest_homepage_text:67 - Failed to fetch contest homepage: 'NoneType' object has no attribute 'text'
+2025-09-02 16:36:33.630 | ERROR    | core.crawler.contests:request_next_two_contests:76 - Cannot find buildId in homepage HTML
+2025-09-02 16:36:33.630 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[(1, 0)]
+2025-09-02 16:36:34.936 | INFO     | core.crawler.contests:request_past_contests:57 - Fetched 10 past contests across 1 pages
+2025-09-02 16:36:34.937 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:36:35.223 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:36:35.224 | SUCCESS  | core.utils:async_wrapper:74 - save_recent_and_next_two_contests finished.
+2025-09-02 16:37:11.275 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: save_recent_and_next_two_contests (trigger: date[2025-09-02 11:07:11 UTC], next run at: 2025-09-02 11:07:11 UTC), dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:08:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:08:11 UTC], next run at: 2025-09-02 11:08:11 UTC), update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), update_last_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC), update_last_contests (trigger: date[2025-09-02 11:13:11 UTC], next run at: 2025-09-02 11:13:11 UTC), update_last_contests (trigger: date[2025-09-02 11:14:11 UTC], next run at: 2025-09-02 11:14:11 UTC), update_last_contests (trigger: date[2025-09-02 11:15:11 UTC], next run at: 2025-09-02 11:15:11 UTC), update_last_contests (trigger: date[2025-09-02 11:16:11 UTC], next run at: 2025-09-02 11:16:11 UTC), update_last_contests (trigger: date[2025-09-02 11:17:11 UTC], next run at: 2025-09-02 11:17:11 UTC)
+2025-09-02 16:37:11.289 | INFO     | core.utils:async_wrapper:72 - save_recent_and_next_two_contests starting...
+2025-09-02 16:37:11.289 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:37:13.303 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:37:13.303 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:37:16.193 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:37:16.195 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:37:18.720 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:37:18.721 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:37:21.624 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:37:21.625 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:37:24.185 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:37:24.186 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:37:26.423 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:37:26.423 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:37:28.982 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:37:28.983 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:37:31.868 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:37:31.868 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:37:34.746 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:37:34.747 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:37:37.563 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:37:37.564 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.com/contest/', 'method': 'GET'}
+2025-09-02 16:37:37.565 | ERROR    | core.crawler.contests:request_contest_homepage_text:67 - Failed to fetch contest homepage: 'NoneType' object has no attribute 'text'
+2025-09-02 16:37:37.565 | ERROR    | core.crawler.contests:request_next_two_contests:76 - Cannot find buildId in homepage HTML
+2025-09-02 16:37:37.567 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[(1, 0)]
+2025-09-02 16:37:39.864 | INFO     | core.crawler.contests:request_past_contests:57 - Fetched 10 past contests across 1 pages
+2025-09-02 16:37:39.866 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:37:40.242 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:37:40.243 | SUCCESS  | core.utils:async_wrapper:74 - save_recent_and_next_two_contests finished.
+2025-09-02 16:38:11.269 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: save_recent_and_next_two_contests (trigger: date[2025-09-02 11:08:11 UTC], next run at: 2025-09-02 11:08:11 UTC), dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:09:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:09:11 UTC], next run at: 2025-09-02 11:09:11 UTC), update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), update_last_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC), update_last_contests (trigger: date[2025-09-02 11:13:11 UTC], next run at: 2025-09-02 11:13:11 UTC), update_last_contests (trigger: date[2025-09-02 11:14:11 UTC], next run at: 2025-09-02 11:14:11 UTC), update_last_contests (trigger: date[2025-09-02 11:15:11 UTC], next run at: 2025-09-02 11:15:11 UTC), update_last_contests (trigger: date[2025-09-02 11:16:11 UTC], next run at: 2025-09-02 11:16:11 UTC), update_last_contests (trigger: date[2025-09-02 11:17:11 UTC], next run at: 2025-09-02 11:17:11 UTC), update_last_contests (trigger: date[2025-09-02 11:18:11 UTC], next run at: 2025-09-02 11:18:11 UTC)
+2025-09-02 16:38:11.285 | INFO     | core.utils:async_wrapper:72 - save_recent_and_next_two_contests starting...
+2025-09-02 16:38:11.286 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:38:13.236 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:38:13.238 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:38:16.030 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:38:16.030 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:38:18.662 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:38:18.663 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:38:21.149 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:38:21.150 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:38:23.706 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:38:23.707 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:38:25.949 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:38:25.949 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:38:28.189 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:38:28.189 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:38:30.745 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:38:30.745 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:38:32.984 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:38:32.986 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:38:35.235 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:38:35.235 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.com/contest/', 'method': 'GET'}
+2025-09-02 16:38:35.235 | ERROR    | core.crawler.contests:request_contest_homepage_text:67 - Failed to fetch contest homepage: 'NoneType' object has no attribute 'text'
+2025-09-02 16:38:35.236 | ERROR    | core.crawler.contests:request_next_two_contests:76 - Cannot find buildId in homepage HTML
+2025-09-02 16:38:35.236 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[(1, 0)]
+2025-09-02 16:38:36.853 | INFO     | core.crawler.contests:request_past_contests:57 - Fetched 10 past contests across 1 pages
+2025-09-02 16:38:36.854 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:38:37.147 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:38:37.148 | SUCCESS  | core.utils:async_wrapper:74 - save_recent_and_next_two_contests finished.
+2025-09-02 16:39:11.277 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:10:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:10:11 UTC], next run at: 2025-09-02 11:10:11 UTC), update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), update_last_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC), update_last_contests (trigger: date[2025-09-02 11:13:11 UTC], next run at: 2025-09-02 11:13:11 UTC), update_last_contests (trigger: date[2025-09-02 11:14:11 UTC], next run at: 2025-09-02 11:14:11 UTC), update_last_contests (trigger: date[2025-09-02 11:15:11 UTC], next run at: 2025-09-02 11:15:11 UTC), update_last_contests (trigger: date[2025-09-02 11:16:11 UTC], next run at: 2025-09-02 11:16:11 UTC), update_last_contests (trigger: date[2025-09-02 11:17:11 UTC], next run at: 2025-09-02 11:17:11 UTC), update_last_contests (trigger: date[2025-09-02 11:18:11 UTC], next run at: 2025-09-02 11:18:11 UTC), update_last_contests (trigger: date[2025-09-02 11:19:11 UTC], next run at: 2025-09-02 11:19:11 UTC)
+2025-09-02 16:39:11.277 | INFO     | core.utils:async_wrapper:72 - save_recent_and_next_two_contests starting...
+2025-09-02 16:39:11.277 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:39:12.664 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:39:12.665 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:39:14.907 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:39:14.907 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:39:17.148 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:39:17.148 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:39:19.481 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:39:19.481 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:39:21.946 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:39:21.947 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:39:24.186 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:39:24.187 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:39:26.427 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:39:26.427 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:39:28.665 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:39:28.665 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:39:30.906 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:39:30.906 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:39:33.102 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:39:33.102 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.com/contest/', 'method': 'GET'}
+2025-09-02 16:39:33.103 | ERROR    | core.crawler.contests:request_contest_homepage_text:67 - Failed to fetch contest homepage: 'NoneType' object has no attribute 'text'
+2025-09-02 16:39:33.103 | ERROR    | core.crawler.contests:request_next_two_contests:76 - Cannot find buildId in homepage HTML
+2025-09-02 16:39:33.103 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[(1, 0)]
+2025-09-02 16:39:35.066 | INFO     | core.crawler.contests:request_past_contests:57 - Fetched 10 past contests across 1 pages
+2025-09-02 16:39:35.067 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:39:35.385 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:39:35.386 | SUCCESS  | core.utils:async_wrapper:74 - save_recent_and_next_two_contests finished.
+2025-09-02 16:40:11.281 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:11:11 UTC), update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), update_last_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC), update_last_contests (trigger: date[2025-09-02 11:13:11 UTC], next run at: 2025-09-02 11:13:11 UTC), update_last_contests (trigger: date[2025-09-02 11:14:11 UTC], next run at: 2025-09-02 11:14:11 UTC), update_last_contests (trigger: date[2025-09-02 11:15:11 UTC], next run at: 2025-09-02 11:15:11 UTC), update_last_contests (trigger: date[2025-09-02 11:16:11 UTC], next run at: 2025-09-02 11:16:11 UTC), update_last_contests (trigger: date[2025-09-02 11:17:11 UTC], next run at: 2025-09-02 11:17:11 UTC), update_last_contests (trigger: date[2025-09-02 11:18:11 UTC], next run at: 2025-09-02 11:18:11 UTC), update_last_contests (trigger: date[2025-09-02 11:19:11 UTC], next run at: 2025-09-02 11:19:11 UTC), update_last_contests (trigger: date[2025-09-02 11:20:11 UTC], next run at: 2025-09-02 11:20:11 UTC)
+2025-09-02 16:40:11.282 | INFO     | core.utils:async_wrapper:72 - save_recent_and_next_two_contests starting...
+2025-09-02 16:40:11.282 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:40:12.617 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:40:12.617 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:40:15.071 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:40:15.071 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:40:17.075 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:40:17.075 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:40:19.223 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:40:19.224 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:40:21.544 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:40:21.544 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:40:23.687 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:40:23.687 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:40:25.903 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:40:25.903 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:40:28.308 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:40:28.308 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:40:30.752 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:40:30.753 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:40:32.966 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:40:32.967 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.com/contest/', 'method': 'GET'}
+2025-09-02 16:40:32.967 | ERROR    | core.crawler.contests:request_contest_homepage_text:67 - Failed to fetch contest homepage: 'NoneType' object has no attribute 'text'
+2025-09-02 16:40:32.967 | ERROR    | core.crawler.contests:request_next_two_contests:76 - Cannot find buildId in homepage HTML
+2025-09-02 16:40:32.967 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[(1, 0)]
+2025-09-02 16:40:34.588 | INFO     | core.crawler.contests:request_past_contests:57 - Fetched 10 past contests across 1 pages
+2025-09-02 16:40:34.588 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:40:34.906 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:40:34.907 | SUCCESS  | core.utils:async_wrapper:74 - save_recent_and_next_two_contests finished.
+2025-09-02 16:41:11.273 | INFO     | core.schedule:dispatch_jobs:110 - Scheduled jobs: update_last_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:11:11 UTC], next run at: 2025-09-02 11:11:11 UTC), dispatch_jobs (trigger: interval[0:01:00], next run at: 2025-09-02 11:12:11 UTC), save_recent_and_next_two_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC), update_last_contests (trigger: date[2025-09-02 11:12:11 UTC], next run at: 2025-09-02 11:12:11 UTC), update_last_contests (trigger: date[2025-09-02 11:13:11 UTC], next run at: 2025-09-02 11:13:11 UTC), update_last_contests (trigger: date[2025-09-02 11:14:11 UTC], next run at: 2025-09-02 11:14:11 UTC), update_last_contests (trigger: date[2025-09-02 11:15:11 UTC], next run at: 2025-09-02 11:15:11 UTC), update_last_contests (trigger: date[2025-09-02 11:16:11 UTC], next run at: 2025-09-02 11:16:11 UTC), update_last_contests (trigger: date[2025-09-02 11:17:11 UTC], next run at: 2025-09-02 11:17:11 UTC), update_last_contests (trigger: date[2025-09-02 11:18:11 UTC], next run at: 2025-09-02 11:18:11 UTC), update_last_contests (trigger: date[2025-09-02 11:19:11 UTC], next run at: 2025-09-02 11:19:11 UTC), update_last_contests (trigger: date[2025-09-02 11:20:11 UTC], next run at: 2025-09-02 11:20:11 UTC), update_last_contests (trigger: date[2025-09-02 11:21:11 UTC], next run at: 2025-09-02 11:21:11 UTC)
+2025-09-02 16:41:11.288 | INFO     | core.utils:async_wrapper:72 - update_last_contests starting...
+2025-09-02 16:41:11.288 | INFO     | core.schedule:update_last_contests:34 - Updating biweekly-contest--9 archive
+2025-09-02 16:41:11.288 | INFO     | core.utils:async_wrapper:72 - save_archive_contest_records starting...
+2025-09-02 16:41:11.290 | INFO     | core.crawler.contests_records:request_contest_records:25 - Fetching contest records from base_url='https://leetcode.cn'
+2025-09-02 16:41:11.290 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:41:11.290 | INFO     | core.utils:async_wrapper:72 - save_recent_and_next_two_contests starting...
+2025-09-02 16:41:11.290 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[('req', 0)]
+2025-09-02 16:41:13.312 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'} status: 403
+2025-09-02 16:41:13.312 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:41:13.313 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:41:13.313 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 1)]
+2025-09-02 16:41:16.190 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'} status: 403
+2025-09-02 16:41:16.190 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:41:16.191 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:41:16.191 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 2)]
+2025-09-02 16:41:18.750 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'} status: 403
+2025-09-02 16:41:18.750 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:41:19.072 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:41:19.072 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 3)]
+2025-09-02 16:41:21.630 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:41:21.631 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:41:21.631 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'} status: 403
+2025-09-02 16:41:21.632 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 4)]
+2025-09-02 16:41:24.190 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:41:24.191 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:41:24.192 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'} status: 403
+2025-09-02 16:41:24.192 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 5)]
+2025-09-02 16:41:27.069 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:41:27.069 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:41:27.069 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'} status: 403
+2025-09-02 16:41:27.069 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 6)]
+2025-09-02 16:41:29.309 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'} status: 403
+2025-09-02 16:41:29.310 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:41:29.310 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:41:29.311 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 7)]
+2025-09-02 16:41:31.832 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:41:31.832 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:41:31.833 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'} status: 403
+2025-09-02 16:41:31.833 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 8)]
+2025-09-02 16:41:34.435 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'} status: 403
+2025-09-02 16:41:34.436 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:41:34.749 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:41:34.750 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=1 requests_list=[('req', 9)]
+2025-09-02 16:41:37.308 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.com/contest/', 'method': 'GET'} status: 403
+2025-09-02 16:41:37.309 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.com/contest/', 'method': 'GET'}
+2025-09-02 16:41:37.309 | ERROR    | core.crawler.contests:request_contest_homepage_text:67 - Failed to fetch contest homepage: 'NoneType' object has no attribute 'text'
+2025-09-02 16:41:37.310 | ERROR    | core.crawler.contests:request_next_two_contests:76 - Cannot find buildId in homepage HTML
+2025-09-02 16:41:37.310 | INFO     | core.crawler.utils:multi_http_request:44 - remaining=0.00% wait_time=0 requests_list=[(1, 0)]
+2025-09-02 16:41:37.311 | WARNING  | core.crawler.utils:multi_http_request:61 - Request failed: request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'} status: 403
+2025-09-02 16:41:37.311 | ERROR    | core.crawler.utils:multi_http_request:37 - Max retries reached for key='req', request={'url': 'https://leetcode.cn/contest/api/ranking/biweekly-contest--9/', 'method': 'GET'}
+2025-09-02 16:41:37.311 | ERROR    | core.crawler.contests_records:request_contest_records:35 - Failed to fetch first page for contest_name='biweekly-contest--9' data_region='CN': 'NoneType' object has no attribute 'json'
+2025-09-02 16:41:37.311 | ERROR    | core.utils:async_wrapper:77 - save_archive_contest_records error=gather_with_limit() got an unexpected keyword argument 'max_con_num'
+Traceback (most recent call last):
+
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\main.py", line 21, in <module>
+    loop.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001CA2225E200>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001CA221A8540>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001CA220D6840>
+    └ <Handle Task.task_wakeup(<_GatheringFu... Forbidden]>]>)>
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<_GatheringFu... Forbidden]>]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<_GatheringFu... Forbidden]>]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<_GatheringFu... Forbidden]>]>)>
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\.venv\Lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=3cf52ad2221b4df69f7dabb241bfe7e7 name=update_last_contests)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=3cf52ad2221b4df69f7dabb241bfe7e7 name=update_last_contests)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=3cf52ad2221b4df69f7dabb241bfe7e7 name=update_last_contests)>
+
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\core\utils.py", line 73, in async_wrapper
+    result = await func(*args, **kwargs)
+                   │     │       └ {}
+                   │     └ ()
+                   └ <function update_last_contests at 0x000001CA22E7AFC0>
+
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\core\schedule.py", line 35, in update_last_contests
+    await save_archive_contest_records(contest_name=biweek_contest_name, data_region="CN")
+          │                                         └ 'biweekly-contest--9'
+          └ <function save_archive_contest_records at 0x000001CA45179580>
+
+> File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\core\utils.py", line 73, in async_wrapper
+    result = await func(*args, **kwargs)
+                   │     │       └ {'contest_name': 'biweekly-contest--9', 'data_region': 'CN'}
+                   │     └ ()
+                   └ <function save_archive_contest_records at 0x000001CA451794E0>
+
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\core\handler\contests_records.py", line 105, in save_archive_contest_records
+    await gather_with_limit(upsert_tasks, max_con_num=50)
+          │                 └ []
+          └ <function gather_with_limit at 0x000001CA43CD8540>
+
+TypeError: gather_with_limit() got an unexpected keyword argument 'max_con_num'
+2025-09-02 16:41:37.329 | ERROR    | core.utils:async_wrapper:77 - update_last_contests error=gather_with_limit() got an unexpected keyword argument 'max_con_num'
+Traceback (most recent call last):
+
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\main.py", line 21, in <module>
+    loop.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001CA2225E200>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001CA221A8540>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001CA220D6840>
+    └ <Handle Task.task_wakeup(<_GatheringFu... Forbidden]>]>)>
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<_GatheringFu... Forbidden]>]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<_GatheringFu... Forbidden]>]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<_GatheringFu... Forbidden]>]>)>
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\.venv\Lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=3cf52ad2221b4df69f7dabb241bfe7e7 name=update_last_contests)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=3cf52ad2221b4df69f7dabb241bfe7e7 name=update_last_contests)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=3cf52ad2221b4df69f7dabb241bfe7e7 name=update_last_contests)>
+
+> File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\core\utils.py", line 73, in async_wrapper
+    result = await func(*args, **kwargs)
+                   │     │       └ {}
+                   │     └ ()
+                   └ <function update_last_contests at 0x000001CA22E7AFC0>
+
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\core\schedule.py", line 35, in update_last_contests
+    await save_archive_contest_records(contest_name=biweek_contest_name, data_region="CN")
+          │                                         └ 'biweekly-contest--9'
+          └ <function save_archive_contest_records at 0x000001CA45179580>
+
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\core\utils.py", line 79, in async_wrapper
+    raise e
+
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\core\utils.py", line 73, in async_wrapper
+    result = await func(*args, **kwargs)
+                   │     │       └ {'contest_name': 'biweekly-contest--9', 'data_region': 'CN'}
+                   │     └ ()
+                   └ <function save_archive_contest_records at 0x000001CA451794E0>
+
+  File "C:\Study\leetcode-contest-predictor\contest-predictor\lc-predictor\apps\py-backend\core\handler\contests_records.py", line 105, in save_archive_contest_records
+    await gather_with_limit(upsert_tasks, max_con_num=50)
+          │                 └ []
+          └ <function gather_with_limit at 0x000001CA43CD8540>
+
+TypeError: gather_with_limit() got an unexpected keyword argument 'max_con_num'
+2025-09-02 16:41:38.727 | INFO     | core.crawler.contests:request_past_contests:57 - Fetched 10 past contests across 1 pages
+2025-09-02 16:41:38.728 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:41:39.228 | SUCCESS  | core.handler.contests:multi_upsert_contests:62 - finished
+2025-09-02 16:41:39.228 | SUCCESS  | core.utils:async_wrapper:74 - save_recent_and_next_two_contests finished.
+2025-09-02 16:41:45.166 | CRITICAL | __main__:<module>:23 - Closing loop. e=KeyboardInterrupt()
+2025-09-02 16:41:46.181 | CRITICAL | __main__:<module>:26 - Closed loop.

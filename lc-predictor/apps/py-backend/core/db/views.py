@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-from db.models import DATA_REGION
+from core.db.models import DATA_REGION
 
 
 class UserKey(BaseModel):

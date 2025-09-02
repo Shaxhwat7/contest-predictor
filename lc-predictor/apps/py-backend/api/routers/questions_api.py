@@ -3,9 +3,8 @@ from typing import List, Optional
 from fastapi import APIRouter, HTTPException, Request
 from loguru import logger
 from pydantic import BaseModel, Field, NonNegativeInt, conlist
-
-from contest_util import validate_contest
 from core.db.models import Question
+from api.contest_util import validate_contest
 
 router = APIRouter(
     prefix="/questions",

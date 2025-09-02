@@ -1,0 +1,5 @@
+2025-09-02 16:39:13.629 | SUCCESS  | core.db.database:start_async_mongodb:69 - MongoDB connection started successfully
+2025-09-02 16:40:00.696 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 388.52ms | Status: 200
+2025-09-02 16:40:06.106 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 400.30ms | Status: 200
+2025-09-02 16:40:31.784 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 367.31ms | Status: 200
+2025-09-02 16:40:52.187 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 312.44ms | Status: 200

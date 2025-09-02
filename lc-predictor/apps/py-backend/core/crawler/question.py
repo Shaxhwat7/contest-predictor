@@ -3,8 +3,8 @@ from typing import Dict, List, Optional
 
 from loguru import logger
 
-from crawler.utils import multi_http_request
-from db.models import DATA_REGION
+from core.crawler.utils import multi_http_request
+from core.db.models import DATA_REGION
 
 
 async def request_question_list(

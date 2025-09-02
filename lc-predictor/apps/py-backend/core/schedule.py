@@ -5,22 +5,22 @@ from typing import Optional
 import pytz
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from loguru import logger
-from base.predictor import predict_contests
+from core.base.predictor import predict_contests
 from core.settings import (
     WEEKLY_CONTEST_REF,
     WEEKLY_CONTEST_TIME,
     BIWEEKLY_CONTEST_REF,
     BIWEEKLY_CONTEST_TIME,
 )
-from handler.contests import (
+from core.handler.contests import (
     is_cn_data_ready,
     save_recent_and_next_two_contests,
 )
-from handler.contests_records import (
+from core.handler.contests_records import (
     save_predict_contest_records,
     save_archive_contest_records,
 )
-from utils import log_exceptions_reraise, weeks_passed_since
+from core.utils import log_exceptions_reraise, weeks_passed_since
 
 scheduler_instance: Optional[AsyncIOScheduler] = None
 

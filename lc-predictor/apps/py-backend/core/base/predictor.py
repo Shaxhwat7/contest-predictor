@@ -4,9 +4,9 @@ import numpy as np
 from beanie.odm.operators.update.general import Set
 from loguru import logger
 
-from elo import elo_delta
-from db.models import Contest, PredictRecord, User
-from utils import gather_with_limit, log_exceptions_reraise
+from core.base.elo import elo_delta
+from core.db.models import Contest, PredictRecord, User
+from core.utils import gather_with_limit, log_exceptions_reraise
 
 async def update_user_rating_immediately(records:List[PredictRecord])->None:
     logger.info("Writing predicted results back into User collection immediately...")

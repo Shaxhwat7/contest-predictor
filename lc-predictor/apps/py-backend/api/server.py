@@ -6,7 +6,7 @@ from core.config import get_yaml_config
 from core.db.database import start_async_mongodb
 from core.utils import init_loguru
 
-from routers import questions_api, contests_data, contests_api
+from api.routers import questions_api, contests_data, contests_api
 app = FastAPI()
 config = get_yaml_config().get("fastapi")
 

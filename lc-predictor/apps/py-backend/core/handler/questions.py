@@ -6,9 +6,9 @@ from typing import List
 from beanie.odm.operators.update.general import Set
 from loguru import logger
 
-from crawler.question import request_question_list
-from db.models import Question, Submission
-from utils import gather_with_limit, get_contest_start_time
+from core.crawler.question import request_question_list
+from core.db.models import Question, Submission
+from core.utils import gather_with_limit, infer_contest_start
 
 
 async def _count_submissions_at_time(
@@ -30,7 +30,7 @@ async def save_questions_real_time_count(
     """
     Track accepted submissions for each question at intervals of delta_minutes.
     """
-    start_time = get_contest_start_time(contest_name)
+    start_time = infer_contest_start(contest_name)
     end_time = start_time + timedelta(minutes=90)
 
     time_points = []

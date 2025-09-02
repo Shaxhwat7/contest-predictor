@@ -4,7 +4,7 @@ from beanie.operators import In
 from pydantic import BaseModel, Field, NonNegativeInt, conint, conlist
 from fastapi import APIRouter, Request
 
-from contest_util import validate_contest
+from api.contest_util import validate_contest
 from core.db.models import PredictRecord, ArchiveRecord
 from core.db.views import UserKey
 
