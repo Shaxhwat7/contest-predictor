@@ -13,7 +13,7 @@ router = APIRouter(
 
 class QuestionQuery(BaseModel):
     contest_slug: Optional[str] = None
-    questions_ids: Optional[List[NonNegativeInt]] = Field(
+    question_ids: Optional[List[NonNegativeInt]] = Field(
         default=None,
         min_items=1,
         max_items=4

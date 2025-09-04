@@ -1,5 +1,15 @@
-2025-09-02 16:39:13.629 | SUCCESS  | core.db.database:start_async_mongodb:69 - MongoDB connection started successfully
-2025-09-02 16:40:00.696 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 388.52ms | Status: 200
-2025-09-02 16:40:06.106 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 400.30ms | Status: 200
-2025-09-02 16:40:31.784 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 367.31ms | Status: 200
-2025-09-02 16:40:52.187 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 312.44ms | Status: 200
+2025-09-04 16:40:07.131 | SUCCESS  | core.db.database:start_async_mongodb:69 - MongoDB connection started successfully
+2025-09-04 16:41:34.661 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 54.37ms | Status: 200
+2025-09-04 16:41:45.426 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 38.65ms | Status: 200
+2025-09-04 16:42:06.427 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 46.55ms | Status: 200
+2025-09-04 16:42:47.415 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 39.54ms | Status: 200
+2025-09-04 16:44:23.122 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 54.10ms | Status: 200
+2025-09-04 16:47:39.098 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 30.91ms | Status: 200
+2025-09-04 16:52:07.113 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 56.68ms | Status: 200
+2025-09-04 16:52:13.109 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 34.18ms | Status: 200
+2025-09-04 16:52:34.417 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 32.20ms | Status: 200
+2025-09-04 16:52:55.123 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 44.30ms | Status: 200
+2025-09-04 16:54:41.415 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 32.60ms | Status: 200
+2025-09-04 16:55:11.510 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 64.61ms | Status: 200
+2025-09-04 16:55:22.102 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 35.55ms | Status: 200
+2025-09-04 16:55:38.104 | INFO     | api.server:log_requests:36 - [127.0.0.1] GET /api/v1/contests/count | Duration: 36.59ms | Status: 200

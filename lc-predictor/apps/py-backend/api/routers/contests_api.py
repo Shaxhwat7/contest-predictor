@@ -16,7 +16,7 @@ class ContestUserStats(BaseModel):
     users_us:Optional[int]=None
     users_cn :Optional[int]=None
 
-@router.get("/user-num-last-ten")
+@router.get("/last-ten-stats")
 async def get_last_ten_contests_user_stats(request:Request)->List[ContestUserStats]:
     contests = (
         await Contest.find(

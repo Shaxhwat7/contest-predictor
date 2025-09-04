@@ -16,13 +16,11 @@ const ThemeButton = () => {
     }   
   };
   useEffect(() => {
-    // Add event listener for clicks when the dropdown is open
     if (showThemeList) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
     }
-    // Clean up event listener on component unmount
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };

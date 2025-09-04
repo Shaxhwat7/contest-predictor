@@ -26,7 +26,7 @@ const PredictedRecordsSearch = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     setPredictedRecordsURL(
-      `${baseUrl}/contest-records/user?contest_name=${titleSlug}&username=${userName}&archived=false`
+      `${baseUrl}/contest-records/user?contest_slug=${titleSlug}&username=${userName}&archi=false`
     );
     setIsSearching(true);
   };
@@ -186,31 +186,21 @@ const PredictedRecords = () => {
   useEffect(() => {
     if (!isSearching) {
       setPredictedRecordsURL(
-        `${baseUrl}/contest-records/?contest_name=${titleSlug}&archived=false&skip=${skipNum}&limit=${pageSize}`
+        `${baseUrl}/contest-records/?contest_slug=${titleSlug}&archi=false&skip=${skipNum}&limit=${pageSize}`
       );
     }
     setUser(null);
   }, [pageNum, isSearching]);
 
   const { data: totalCount } = useSWR(
-    `${baseUrl}/contest-records/count?contest_name=${titleSlug}&archived=false`,
+    `${baseUrl}/contest-records/count?contest_slug=${titleSlug}&archi=false`,
     (url) => fetch(url).then((r) => r.json()),
     { revalidateOnFocus: false }
   );
 
   const { data: questionsRaw } = useSWR(
-    [
-      `${baseUrl}/questions/`,
-      JSON.stringify({
-        contest_name: titleSlug,
-      }),
-    ],
-    ([url, body]) =>
-      fetch(url, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: body,
-      }).then((r) => r.json()),
+    `${baseUrl}/questions/?contest_slug=${titleSlug}`,
+    (url) => fetch(url).then((r) => r.json()),
     { revalidateOnFocus: false }
   );
   // console.log(`questionsRaw=${questionsRaw}`);
@@ -234,7 +224,7 @@ const PredictedRecords = () => {
       ? [
           `${baseUrl}/contest-records/real-time-rank`,
           JSON.stringify({
-            contest_name: titleSlug,
+            contest_slug: titleSlug,
             user: user,
           }),
         ]
